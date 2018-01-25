@@ -8,6 +8,7 @@ body {
 	background-size: cover;
 	padding: 0;
 	margin: 0;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .hero {
@@ -21,19 +22,45 @@ body {
  }
 	.hero h1 { 
 		transform: skewY(2deg);
-		font-family: 'Poiret One', cursive;
-		font-size: 4em;
+		font-family: 'Rokkitt', serif;
+		font-size: 5em;
 		margin: 0;
 		text-transform: uppercase;
 	    text-shadow: 4px 2px 0px #3e3e3e;
     	color: #fefefe;
+    	animation: 0.55s ease-in 0s 1 slideInFromTop;
 	}
-	.hero p.tagline { transform: skewY(2deg); }
-.container { width: 60em; margin: 0 auto; padding: 2em; }
+	.hero p.tagline {
+		transform: skewY(2deg);
+		font-style: oblique;
+	    color: #ececec;
+	    text-shadow: 1px 1px 0px #444;
+	}
 
-/* Rounded */
+
+/* Utilities */
+.container { width: 60em; margin: 0 auto; padding: 2em; }
 .rounded { border-radius: 5px; }
 
 /* Background colours */
 .bkg-white { background: rgba(255, 255, 255, 0.65); }
 .bkg-lanka { background: linear-gradient(70deg, #00524d 0%,#ec7500 38%,#8e0d37 100%); }
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
